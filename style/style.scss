@@ -1,0 +1,167 @@
+@import './variables';
+
+body {
+    font-family: $ff;
+    font-size: $f-size;
+    font-weight: $fw-regurlar;
+    color: $clr-f-primary;
+
+    background-color: $clr-bgr-body;
+}
+
+main {
+    @include flexcenter;
+}
+
+h1,
+.user-name,
+a {
+    color: $clr-f-bold;
+    font-weight: $fw-bold;
+    text-decoration: none;
+}
+
+.user-name{
+    margin-right: .3rem;
+}
+
+// button style
+button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-weight: $fw-regurlar;
+    
+    &:hover {
+        cursor: pointer;
+        color: $clr-blue;
+    }
+}
+
+
+.post {
+    margin-left: .3rem;
+    color: $clr-f-primary;
+}
+
+
+.group {
+    margin-left: .3rem;
+    color: $clr-blue;
+}
+
+a:hover {
+    color: $clr-blue;
+    cursor: pointer;
+}
+
+.notification-text,
+.dot-notred {
+    display: inline-block;
+}
+
+.dot-notred {
+    visibility: hidden;
+
+    width: .5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-left: .3rem;
+    
+    background-color: $clr-red;
+}
+
+.notification-time {
+    color: $clr-f-time;
+}
+
+.container {
+    @include grid(1fr, repeat(1fr, auto), 1rem);
+    width: 580px;
+    margin-top: 4rem;
+    padding: 1rem 1.4rem;
+    border-radius: $radius-container;
+
+    background-color: $clr-bgr-container;
+    // container header
+    .container-header {
+        padding: 1rem 0;
+        @include flexcenter;
+        justify-content: space-between;
+
+        h1 {
+            font-size: 1.2em;
+            
+            #notification-number {
+                font-size: .8em;
+                color: $clr-bgr-container;
+                background-color: $clr-blue;
+                border-radius: 4px;
+                padding: .1rem .5rem;
+                margin-left: .5rem;
+            }
+        }       
+    }
+
+    // notification box setup
+    .notification-box {
+        @include grid(2.3rem 1fr, auto, 1rem);
+        
+        padding: 1rem;
+        border-radius: $radius-notifications;
+        
+        font-size: .8em;
+    }    
+}
+
+// private message preview
+#private-message {
+    grid-column: 2/3;
+
+    padding: .8rem;
+    border-radius: $radius-notifications;
+    resize: none;
+    overflow: hidden;
+    text-align: left;
+
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    background-color: $clr-bgr-container;
+
+    &:hover {
+        background-color: $clr-msg-primary;
+        border: 1px solid $clr-msg-primary;
+        cursor: pointer;
+    }
+}
+
+// not read notification style
+.not-read {
+    background-color: $clr-message-received;
+}
+
+.not-read>.notification-wrapper>.notification>.dot-notred {
+    visibility: visible;
+}
+
+// picture preview notification
+.image-preview {
+    grid-column: 3/4;
+    width: 2.3rem;
+}
+
+.has-picture-prev {
+    @include grid(2.3rem 1fr 2.3rem, auto, 1rem);
+}
+
+// attribution
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin: 1rem auto;
+    a { 
+        color: hsl(228, 45%, 44%); 
+    }
+}

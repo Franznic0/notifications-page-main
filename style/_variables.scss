@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+// Primary colors
+$clr-red: hsl(1, 90%, 64%);
+$clr-blue: hsl(219, 85%, 26%);
+
+// Neutral colors
+$clr-bgr-container: hsl(0, 0%, 100%);
+$clr-message-received: hsl(210, 60%, 98%);
+$clr-msg-primary: hsl(211, 68%, 94%);
+$clr-bgr-body: hsl(205, 33%, 90%);
+$clr-f-time: hsl(219, 14%, 63%);
+$clr-f-primary: hsl(219, 12%, 42%);
+$clr-f-bold: hsl(224, 21%, 14%);
+
+// font
+$ff: "Plus Jakarta Sans", sans-serif;
+$f-size: 16px;
+$fw-regurlar: 500;
+$fw-bold: 800;
+
+// border radius
+$radius-container:10px;
+$radius-notifications: 5px;
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid($gridcol, $gridrow, $gap) {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: $gridcol;
+    grid-template-rows: $gridrow;
+    gap: $gap;
+}

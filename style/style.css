@@ -1,1 +1,172 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(219, 12%, 42%);
+  background-color: hsl(205, 33%, 90%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+.user-name,
+a {
+  color: hsl(224, 21%, 14%);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.user-name {
+  margin-right: 0.3rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 500;
+}
+button:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+
+.post {
+  margin-left: 0.3rem;
+  color: hsl(219, 12%, 42%);
+}
+
+.group {
+  margin-left: 0.3rem;
+  color: hsl(219, 85%, 26%);
+}
+
+a:hover {
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+}
+
+.notification-text,
+.dot-notred {
+  display: inline-block;
+}
+
+.dot-notred {
+  visibility: hidden;
+  width: 0.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin-left: 0.3rem;
+  background-color: hsl(1, 90%, 64%);
+}
+
+.notification-time {
+  color: hsl(219, 14%, 63%);
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1fr, auto);
+  gap: 1rem;
+  width: 580px;
+  margin-top: 4rem;
+  padding: 1rem 1.4rem;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
+}
+.container .container-header {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .container-header h1 {
+  font-size: 1.2em;
+}
+.container .container-header h1 #notification-number {
+  font-size: 0.8em;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(219, 85%, 26%);
+  border-radius: 4px;
+  padding: 0.1rem 0.5rem;
+  margin-left: 0.5rem;
+}
+.container .notification-box {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 2.3rem 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+
+#private-message {
+  grid-column: 2/3;
+  padding: 0.8rem;
+  border-radius: 5px;
+  resize: none;
+  overflow: hidden;
+  text-align: left;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: hsl(0, 0%, 100%);
+}
+#private-message:hover {
+  background-color: hsl(211, 68%, 94%);
+  border: 1px solid hsl(211, 68%, 94%);
+  cursor: pointer;
+}
+
+.not-read {
+  background-color: hsl(210, 60%, 98%);
+}
+
+.not-read > .notification-wrapper > .notification > .dot-notred {
+  visibility: visible;
+}
+
+.image-preview {
+  grid-column: 3/4;
+  width: 2.3rem;
+}
+
+.has-picture-prev {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 2.3rem 1fr 2.3rem;
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 1rem auto;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
