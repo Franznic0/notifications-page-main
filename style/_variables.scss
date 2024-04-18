@@ -40,7 +40,7 @@ $radius-notifications: 5px;
 @mixin grid($gridcol, $gridrow, $gap) {
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-items: normal;
     grid-template-columns: $gridcol;
     grid-template-rows: $gridrow;
     gap: $gap;

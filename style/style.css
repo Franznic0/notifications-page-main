@@ -63,11 +63,11 @@ a:hover {
 
 .notification-text,
 .dot-notred {
-  display: inline-block;
+  display: inline;
 }
 
 .dot-notred {
-  visibility: hidden;
+  justify-self: flex-end;
   width: 0.5rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -82,7 +82,7 @@ a:hover {
 .container {
   display: grid;
   justify-content: center;
-  align-items: center;
+  align-items: normal;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(1fr, auto);
   gap: 1rem;
@@ -113,7 +113,7 @@ a:hover {
 .container .notification-box {
   display: grid;
   justify-content: center;
-  align-items: center;
+  align-items: normal;
   grid-template-columns: 2.3rem 1fr;
   grid-template-rows: auto;
   gap: 1rem;
@@ -124,19 +124,19 @@ a:hover {
 
 #private-message {
   grid-column: 2/3;
-  padding: 0.8rem;
+  padding: 1rem;
   border-radius: 5px;
-  resize: none;
-  overflow: hidden;
+  border: 1px solid hsl(211, 68%, 94%);
   text-align: left;
+  background-color: hsl(0, 0%, 100%);
+}
+#private-message a {
   font-family: inherit;
   font-weight: inherit;
   color: inherit;
-  background-color: hsl(0, 0%, 100%);
 }
 #private-message:hover {
   background-color: hsl(211, 68%, 94%);
-  border: 1px solid hsl(211, 68%, 94%);
   cursor: pointer;
 }
 
@@ -145,7 +145,7 @@ a:hover {
 }
 
 .not-read > .notification-wrapper > .notification > .dot-notred {
-  visibility: visible;
+  display: inline-block;
 }
 
 .image-preview {
@@ -156,7 +156,7 @@ a:hover {
 .has-picture-prev {
   display: grid;
   justify-content: center;
-  align-items: center;
+  align-items: normal;
   grid-template-columns: 2.3rem 1fr 2.3rem;
   grid-template-rows: auto;
   gap: 1rem;
@@ -169,4 +169,10 @@ a:hover {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 580px) {
+  .container {
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
