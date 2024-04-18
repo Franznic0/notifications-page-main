@@ -62,7 +62,7 @@ a:hover {
 }
 // not read dot
 .dot-notred {
-    // visibility: hidden;
+    visibility: hidden;
     justify-self: flex-end;
 
     width: .5rem;
@@ -111,9 +111,19 @@ a:hover {
         
         padding: 1rem;
         border-radius: $radius-notifications;
+        background-color: $clr-bgr-container;
         
         font-size: .8em;
     }    
+    // not read notification style
+    .not-read {
+        background-color: $clr-message-received;
+        
+        .notification-wrapper>.notification>.dot-notred {
+            visibility: visible;
+            display: inline-block;
+        }
+    }
 }
 
 // private message preview
@@ -139,15 +149,7 @@ a:hover {
     }
 }
 
-// not read notification style
-.not-read {
-    background-color: $clr-message-received;
-}
 
-.not-read>.notification-wrapper>.notification>.dot-notred {
-    // visibility: visible;
-    display: inline-block;
-}
 
 // picture preview notification
 .image-preview {
@@ -172,5 +174,6 @@ a:hover {
 @media screen and (max-width: 580px) {
     .container {
         margin-top: 0;
+        border-radius: 0 0 $radius-container $radius-container;
     }
 }

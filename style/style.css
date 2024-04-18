@@ -67,6 +67,7 @@ a:hover {
 }
 
 .dot-notred {
+  visibility: hidden;
   justify-self: flex-end;
   width: 0.5rem;
   aspect-ratio: 1/1;
@@ -119,7 +120,15 @@ a:hover {
   gap: 1rem;
   padding: 1rem;
   border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
   font-size: 0.8em;
+}
+.container .not-read {
+  background-color: hsl(210, 60%, 98%);
+}
+.container .not-read .notification-wrapper > .notification > .dot-notred {
+  visibility: visible;
+  display: inline-block;
 }
 
 #private-message {
@@ -138,14 +147,6 @@ a:hover {
 #private-message:hover {
   background-color: hsl(211, 68%, 94%);
   cursor: pointer;
-}
-
-.not-read {
-  background-color: hsl(210, 60%, 98%);
-}
-
-.not-read > .notification-wrapper > .notification > .dot-notred {
-  display: inline-block;
 }
 
 .image-preview {
@@ -174,5 +175,6 @@ a:hover {
 @media screen and (max-width: 580px) {
   .container {
     margin-top: 0;
+    border-radius: 0 0 10px 10px;
   }
 }/*# sourceMappingURL=style.css.map */
