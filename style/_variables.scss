@@ -23,7 +23,7 @@ $clr-f-bold: hsl(224, 21%, 14%);
 
 // font
 $ff: "Plus Jakarta Sans", sans-serif;
-$f-size: 16px;
+$f-size: clamp(14px, 2vw, 16px);
 $fw-regurlar: 500;
 $fw-bold: 800;
 

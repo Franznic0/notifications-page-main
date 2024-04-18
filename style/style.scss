@@ -78,7 +78,7 @@ a:hover {
 }
 
 .container {
-    @include grid(1fr, repeat(1fr, auto), 1rem);
+    @include grid(1fr, repeat(1fr, auto), .4rem);
     width: 580px;
     margin-top: 4rem;
     padding: 1rem 1.4rem;
@@ -95,7 +95,8 @@ a:hover {
             font-size: 1.2em;
             
             #notification-number {
-                font-size: .8em;
+                font-size: .7em;
+                font-weight: $fw-regurlar;
                 color: $clr-bgr-container;
                 background-color: $clr-blue;
                 border-radius: 4px;
@@ -104,12 +105,12 @@ a:hover {
             }
         }       
     }
-
+    
     // notification box setup
     .notification-box {
         @include grid(2.3rem 1fr, auto, 1rem);
         
-        padding: 1rem;
+        padding: .8rem 1rem;
         border-radius: $radius-notifications;
         background-color: $clr-bgr-container;
         
@@ -130,10 +131,11 @@ a:hover {
 #private-message {
     grid-column: 2/3;
 
-    padding: 1rem;
+    padding: .8rem 1rem;
     border-radius: $radius-notifications;
     border: 1px solid $clr-msg-primary;
     text-align: left;
+    // font-size: .9em;
 
     background-color: $clr-bgr-container;
 
@@ -163,7 +165,7 @@ a:hover {
 
 // attribution
 .attribution { 
-    font-size: 11px; 
+    font-size: clamp(10px, 2vw, 11px); 
     text-align: center; 
     margin: 1rem auto;
     a { 
